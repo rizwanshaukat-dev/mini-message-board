@@ -20,6 +20,11 @@ router.get('/',(req,res)=>{
         messages:messages
     })
 });
+router.get('/message/:id',(req,res)=>{
+  res.render("message",{
+    message:messages[req.params.id]
+  })
+});
 router.get('/new',(req,res)=>{
     res.render("form")
 });
