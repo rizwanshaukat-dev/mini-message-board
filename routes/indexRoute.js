@@ -20,7 +20,6 @@ router.get('/',(req,res)=>{
         messages:messages
     })
 });
-
 router.get('/new',(req,res)=>{
     res.render("form")
 });
