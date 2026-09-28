@@ -7,11 +7,12 @@
 </head>
 <body>
     <h1>Mini Message Board</h1>
-    <% messages.forEach((message)=> { %>
+    <% messages.forEach((message,index)=> { %>
         <li>
             <p><%= message.user %></p>
             <p><%= message.text %></p>
             <p><%= message.added %></p>
+            <a href="/<%=index%>">Open</a>
         </li>
     <%})%>
 </body>

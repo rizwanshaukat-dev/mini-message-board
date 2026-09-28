@@ -20,6 +20,7 @@ router.get('/',(req,res)=>{
         messages:messages
     })
 });
+
 router.get('/new',(req,res)=>{
     res.render("form")
 });
@@ -28,5 +29,6 @@ router.post('/new',(req,res)=>{
     const messageText=req.body.message;
     messages.push( {text: messageText, user: messageUser, added: new Date() });
     res.redirect('/');
-})
+});
+
 module.exports = router;
